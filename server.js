@@ -21,8 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 // DB config
-const connection_url =
-  "mongodb+srv://Dubjay:WeRj9bFBu3YaLo0S@cluster0.zdizk.mongodb.net/test?retryWrites=true&w=majority";
+const connection_url = process.env.MONGO_URI;
 
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
